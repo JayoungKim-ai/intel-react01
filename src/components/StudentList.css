@@ -1,0 +1,41 @@
+/* 기본 배경 설정 */
+body {
+  background-color: #f8faff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 카드 컨테이너 (가로 배열) */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+/* 개별 카드 스타일 */
+.card {
+  background-color: #f1f4f9; /* 연한 블루 그레이 톤 */
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  min-width: 150px;
+}
+
+/* 텍스트 스타일 */
+.card p {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* 트로피 이모지 간격 */
+.trophy {
+  margin-left: 8px;
+  font-size: 1.3rem;
+}
