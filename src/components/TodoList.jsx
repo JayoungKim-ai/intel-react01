@@ -71,7 +71,7 @@ function TodoList() {
   }, [todos]);
   return (
     <div className="container">
-      <h1>📝 Todo List</h1>
+      <h1>📝 투두리스트</h1>
       <div className="input-box">
         <input
           type="text"
