@@ -4,6 +4,7 @@ import Festival from "./components/Festival";
 function App() {
   return (
     <>
+      <Home />
       <Festival />
     </>
   );
