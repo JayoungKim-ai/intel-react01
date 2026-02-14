@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "./components/Home";
+import Animal from "./components/Animal";
 // import Festival from "./components/Festival";
 
 function App() {
   return (
     <>
-      <Home />
+      <Animal />
       {/* <Festival /> */}
     </>
   );
