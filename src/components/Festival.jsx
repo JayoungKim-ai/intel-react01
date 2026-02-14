@@ -7,8 +7,7 @@ function Festival() {
   useEffect(() => {
     async function getData() {
       try {
-        const url =
-          "http://api.data.go.kr/openapi/tn_pubr_public_cltur_fstvl_api?pageNo=1&numOfRows=100&type=json&serviceKey=hVVMVuTmCbA7r2MOOyDFItXgSn3eGaMpq9gp%2Ba99j0J0f8Cr%2FzUi%2F1gGdnf44QBuGhMmcoFrmyluc1%2BQR7LhoQ%3D%3D";
+        const url = "https://intel-server-iqjy.onrender.com/festival";
         const response = await fetch(url);
 
         // 응답이 성공인지 확인
@@ -17,8 +16,8 @@ function Festival() {
         }
 
         const data = await response.json();
-        console.log(data.response.body.items);
-        setFestivals(data.response.body.items);
+        console.log(data);
+        setFestivals(data);
       } catch (error) {
         console.log("에러 발생:", error.message); // Rejected 처리
         return null;
