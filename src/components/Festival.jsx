@@ -7,7 +7,7 @@ function Festival() {
   useEffect(() => {
     async function getData() {
       try {
-        const url = "https://intel-server-iqjy.onrender.com/festival";
+        const url = `${import.meta.env.VITE_API_URL}/festival`;
         const response = await fetch(url);
 
         // 응답이 성공인지 확인
