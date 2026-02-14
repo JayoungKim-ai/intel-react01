@@ -7,7 +7,7 @@ function Animal() {
     async function getData() {
       try {
         const response = await fetch(
-          "https://intel-server-iqjy.onrender.com/animal",
+          "https://intel-server-iqjy.onrender.com/festival",
         );
 
         // 응답이 성공인지 확인
