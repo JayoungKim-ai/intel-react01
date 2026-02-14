@@ -6,7 +6,9 @@ function Animal() {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/animal");
+        const response = await fetch(
+          "https://intel-server-iqjy.onrender.com/animal",
+        );
 
         // 응답이 성공인지 확인
         if (!response.ok) {
