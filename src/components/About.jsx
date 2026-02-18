@@ -5,7 +5,7 @@ const About = () => {
   const [about, setAbout] = useState({});
   useEffect(() => {
     async function getData() {
-      const response = await fetch("http://127.0.0.1:8000/about");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/about`);
       const data = await response.json();
       setAbout(data);
       console.log(data);
