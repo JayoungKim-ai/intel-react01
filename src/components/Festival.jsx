@@ -9,7 +9,7 @@ function Festival() {
     async function getData() {
       try {
         setLoading(true);
-        const url = `${import.meta.env.VITE_API_URL}/festivals`;
+        const url = `${import.meta.env.VITE_API_URL}/festival`;
         const response = await fetch(url);
 
         // 응답이 성공인지 확인
