@@ -1,25 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-function About() {
-  const [about, setAbout] = useState("");
+const About = () => {
+  const [about, setAbout] = useState({});
   useEffect(() => {
     async function getData() {
-      try {
-        const response = await fetch("http://127.0.0.1:8000/about");
-
-        // 응답이 성공인지 확인
-        if (!response.ok) {
-          throw new Error(`HTTP 오류! 상태 : ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(data);
-        setAbout(data);
-      } catch (error) {
-        console.log("에러 발생:", error.message); // Rejected 처리
-        return null;
-      }
+      const response = await fetch("http://127.0.0.1:8000/about");
+      const data = await response.json();
+      setAbout(data);
+      console.log(data);
     }
     getData();
   }, []);
@@ -30,6 +19,6 @@ function About() {
       <div>주소:{about.address}</div>
     </div>
   );
-}
+};
 
 export default About;

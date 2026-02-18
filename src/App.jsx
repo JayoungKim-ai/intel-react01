@@ -1,13 +1,23 @@
+// App.jsx
 import React from "react";
-// import Animal from "./components/Animal";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
 import Festival from "./components/Festival";
+import NotFound from "./components/NotFound";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <>
-      {/* <Animal /> */}
-      <Festival />
-    </>
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/festival" element={<Festival />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 
